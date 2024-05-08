@@ -1,0 +1,20 @@
+{
+	"@type":"Process",
+	"Name":"}sys_attributes_export_defs",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"}sys_attributes_export_defs.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"data_dir",
+			"Prompt":"",
+			"Value":"",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}
