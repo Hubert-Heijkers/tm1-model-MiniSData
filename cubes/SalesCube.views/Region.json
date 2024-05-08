@@ -1,0 +1,206 @@
+{
+	"@type":"NativeView",
+	"Name":"Region",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('month')/Hierarchies('month')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('month')/Hierarchies('month')/Elements('Jan')"
+					},
+					{
+						"@id":"Dimensions('month')/Hierarchies('month')/Elements('Feb')"
+					},
+					{
+						"@id":"Dimensions('month')/Hierarchies('month')/Elements('Mar')"
+					},
+					{
+						"@id":"Dimensions('month')/Hierarchies('month')/Elements('Apr')"
+					},
+					{
+						"@id":"Dimensions('month')/Hierarchies('month')/Elements('May')"
+					},
+					{
+						"@id":"Dimensions('month')/Hierarchies('month')/Elements('Jun')"
+					},
+					{
+						"@id":"Dimensions('month')/Hierarchies('month')/Elements('Jul')"
+					},
+					{
+						"@id":"Dimensions('month')/Hierarchies('month')/Elements('Aug')"
+					},
+					{
+						"@id":"Dimensions('month')/Hierarchies('month')/Elements('Sep')"
+					},
+					{
+						"@id":"Dimensions('month')/Hierarchies('month')/Elements('Oct')"
+					},
+					{
+						"@id":"Dimensions('month')/Hierarchies('month')/Elements('Nov')"
+					},
+					{
+						"@id":"Dimensions('month')/Hierarchies('month')/Elements('Dec')"
+					}
+				]
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('region')/Hierarchies('region')"
+				},
+				"Expression":"TM1SubsetAll([region])"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('actvsbud')/Hierarchies('actvsbud')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('actvsbud')/Hierarchies('actvsbud')/Elements('Variance')"
+					},
+					{
+						"@id":"Dimensions('actvsbud')/Hierarchies('actvsbud')/Elements('Actual')"
+					},
+					{
+						"@id":"Dimensions('actvsbud')/Hierarchies('actvsbud')/Elements('Budget')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('actvsbud')/Hierarchies('actvsbud')/Elements('Actual')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('model')/Hierarchies('model')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('model')/Hierarchies('model')/Elements('L Series 2WD')"
+					},
+					{
+						"@id":"Dimensions('model')/Hierarchies('model')/Elements('L Series 4WD')"
+					},
+					{
+						"@id":"Dimensions('model')/Hierarchies('model')/Elements('L Series')"
+					},
+					{
+						"@id":"Dimensions('model')/Hierarchies('model')/Elements('S Series 2WD')"
+					},
+					{
+						"@id":"Dimensions('model')/Hierarchies('model')/Elements('S Series 4WD')"
+					},
+					{
+						"@id":"Dimensions('model')/Hierarchies('model')/Elements('S Series')"
+					},
+					{
+						"@id":"Dimensions('model')/Hierarchies('model')/Elements('Total')"
+					},
+					{
+						"@id":"Dimensions('model')/Hierarchies('model')/Elements('S Series')"
+					},
+					{
+						"@id":"Dimensions('model')/Hierarchies('model')/Elements('S Series Sedan')"
+					},
+					{
+						"@id":"Dimensions('model')/Hierarchies('model')/Elements('S Series 1.8 L Sedan')"
+					},
+					{
+						"@id":"Dimensions('model')/Hierarchies('model')/Elements('S Series 2.0 L Sedan')"
+					},
+					{
+						"@id":"Dimensions('model')/Hierarchies('model')/Elements('S Series 2.5 L Sedan')"
+					},
+					{
+						"@id":"Dimensions('model')/Hierarchies('model')/Elements('S Series 3.0 L Sedan')"
+					},
+					{
+						"@id":"Dimensions('model')/Hierarchies('model')/Elements('S Series 3.4 L Sedan')"
+					},
+					{
+						"@id":"Dimensions('model')/Hierarchies('model')/Elements('S Series 2.5 L Sedan 4WD')"
+					},
+					{
+						"@id":"Dimensions('model')/Hierarchies('model')/Elements('S Series 3.0 L Sedan 4WD')"
+					},
+					{
+						"@id":"Dimensions('model')/Hierarchies('model')/Elements('S Series 3.4 L Sedan 4WD')"
+					},
+					{
+						"@id":"Dimensions('model')/Hierarchies('model')/Elements('S Series Wagon')"
+					},
+					{
+						"@id":"Dimensions('model')/Hierarchies('model')/Elements('L Series')"
+					},
+					{
+						"@id":"Dimensions('model')/Hierarchies('model')/Elements('T Series')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('model')/Hierarchies('model')/Elements('S Series 1.8 L Sedan')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('account1')/Hierarchies('account1')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('account1')/Hierarchies('account1')/Elements('Gross Margin%25')"
+					},
+					{
+						"@id":"Dimensions('account1')/Hierarchies('account1')/Elements('Price')"
+					},
+					{
+						"@id":"Dimensions('account1')/Hierarchies('account1')/Elements('Units')"
+					},
+					{
+						"@id":"Dimensions('account1')/Hierarchies('account1')/Elements('Sales')"
+					},
+					{
+						"@id":"Dimensions('account1')/Hierarchies('account1')/Elements('Variable Costs')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('account1')/Hierarchies('account1')/Elements('Sales')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.#########"
+}

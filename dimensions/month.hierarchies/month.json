@@ -1,0 +1,159 @@
+{
+	"@type":"Hierarchy",
+	"Name":"month",
+	"Elements":
+	[
+		{
+			"Name":"Jan",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Feb",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Mar",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Apr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"May",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Jun",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Jul",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Aug",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sep",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Oct",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Nov",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dec",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1 Quarter",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"2 Quarter",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"3 Quarter",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"4 Quarter",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Year",
+			"Type":"Consolidated"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"1 Quarter",
+			"ComponentName":"Jan",
+			"Weight":1
+		},
+		{
+			"ParentName":"1 Quarter",
+			"ComponentName":"Feb",
+			"Weight":1
+		},
+		{
+			"ParentName":"1 Quarter",
+			"ComponentName":"Mar",
+			"Weight":1
+		},
+		{
+			"ParentName":"2 Quarter",
+			"ComponentName":"Apr",
+			"Weight":1
+		},
+		{
+			"ParentName":"2 Quarter",
+			"ComponentName":"May",
+			"Weight":1
+		},
+		{
+			"ParentName":"2 Quarter",
+			"ComponentName":"Jun",
+			"Weight":1
+		},
+		{
+			"ParentName":"3 Quarter",
+			"ComponentName":"Jul",
+			"Weight":1
+		},
+		{
+			"ParentName":"3 Quarter",
+			"ComponentName":"Aug",
+			"Weight":1
+		},
+		{
+			"ParentName":"3 Quarter",
+			"ComponentName":"Sep",
+			"Weight":1
+		},
+		{
+			"ParentName":"4 Quarter",
+			"ComponentName":"Oct",
+			"Weight":1
+		},
+		{
+			"ParentName":"4 Quarter",
+			"ComponentName":"Nov",
+			"Weight":1
+		},
+		{
+			"ParentName":"4 Quarter",
+			"ComponentName":"Dec",
+			"Weight":1
+		},
+		{
+			"ParentName":"Year",
+			"ComponentName":"1 Quarter",
+			"Weight":1
+		},
+		{
+			"ParentName":"Year",
+			"ComponentName":"2 Quarter",
+			"Weight":1
+		},
+		{
+			"ParentName":"Year",
+			"ComponentName":"3 Quarter",
+			"Weight":1
+		},
+		{
+			"ParentName":"Year",
+			"ComponentName":"4 Quarter",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

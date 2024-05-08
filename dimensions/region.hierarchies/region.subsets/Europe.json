@@ -1,0 +1,13 @@
+{
+	"@type":"Subset",
+	"Name":"Europe",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('region')/Hierarchies('region')/Elements('Central Europe')"
+		},
+		{
+			"@id":"Dimensions('region')/Hierarchies('region')/Elements('Southern Europe')"
+		}
+	]
+}

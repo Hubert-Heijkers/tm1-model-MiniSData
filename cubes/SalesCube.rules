@@ -1,0 +1,10 @@
+SKIPCHECK;
+['Gross Margin%']=['Gross Margin']\['Sales']*100;
+['Price']=N:DB('PriceCube',!actvsbud,!region,!model,!month);
+C:['Sales']\['Units']*1000;
+['Sales']=N:['Price']*['Units']\1000;
+
+FEEDERS;
+['Units']=>['Price'];
+['Units']=>['Sales'];
+['Units']=>['Gross Margin%'];

@@ -1,0 +1,20 @@
+{
+	"@type":"Cube",
+	"Name":"PriceCube",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('actvsbud')"
+		},
+		{
+			"@id":"Dimensions('region')"
+		},
+		{
+			"@id":"Dimensions('model')"
+		},
+		{
+			"@id":"Dimensions('month')"
+		}
+	],
+	"Views@Code.links":[]
+}
