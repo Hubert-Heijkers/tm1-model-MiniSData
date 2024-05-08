@@ -3,10 +3,7 @@
     "Name": "MiniSData",
     "Files":
     [
-        "README.md",
-        ".github/*",
-        "scripts/*",
-        "/}sys_attributes/*"
+        "}sys_attributes/*"
     ],
     "Ignore": 
     [
