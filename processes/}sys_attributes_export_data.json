@@ -6,8 +6,8 @@
 	"DataSource":
 	{
 		"Type":"TM1CubeView",
-		"dataSourceNameForClient":"}dummy_cube",
 		"dataSourceNameForServer":"}dummy_cube",
+		"dataSourceNameForClient":"}dummy_cube",
 		"view":"}dummy_view"
 	},
 	"Parameters":

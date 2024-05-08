@@ -6,14 +6,14 @@
 	"DataSource":
 	{
 		"Type":"ASCII",
-		"asciiDecimalSeparator":".",
-		"asciiDelimiterChar":",",
-		"asciiDelimiterType":"Character",
+		"dataSourceNameForServer":"dummy_attributes.csv",
+		"dataSourceNameForClient":"dummy_attributes.csv",
 		"asciiHeaderRecords":0,
 		"asciiQuoteCharacter":"\"",
+		"asciiDecimalSeparator":".",
 		"asciiThousandSeparator":",",
-		"dataSourceNameForClient":"dummy_attributes.csv",
-		"dataSourceNameForServer":"dummy_attributes.csv"
+		"asciiDelimiterType":"Character",
+		"asciiDelimiterChar":","
 	},
 	"Parameters":
 	[
