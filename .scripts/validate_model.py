@@ -3,6 +3,17 @@ import base64
 import json
 import sys
 
+database_name = "MiniSData"
+if len(sys.argv) > 1:
+    pr_number = sys.argv[1]
+    print(f"Pull Request: #{pr_number}")
+    database_name = f"{database_name}-{pr_number}"
+if len(sys.argv) > 2:
+    commit_hash = sys.argv[2]
+    print(f"Commit Hash: {commit_hash}")
+    database_name = f"{database_name}-{commit_hash[:7]}"
+print(f"Datbase name: {database_name}")
+
 tm1_service_root_url = "http://cwc-tm1-v12-demo.tm1-code.io:4444/tm1/api/v1"
 tm1_service_username = "hubert@tm1-code.io"
 tm1_service_password = "apple"
@@ -61,7 +72,6 @@ def log_output(msg, status_code, response_json):
     if response_json != None:
         print(json.dumps(response_json, indent=4))
 
-database_name = "MiniSData"
 databases_endpoint = "Databases"
 database_endpoint = f"{databases_endpoint}('{database_name}')"
 
