@@ -1,0 +1,30 @@
+{
+	"@type":"Cube",
+	"Name":"SalesCube",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('actvsbud')"
+		},
+		{
+			"@id":"Dimensions('region')"
+		},
+		{
+			"@id":"Dimensions('model')"
+		},
+		{
+			"@id":"Dimensions('account1')"
+		},
+		{
+			"@id":"Dimensions('month')"
+		}
+	],
+	"Rules@Code.link":"SalesCube.rules",
+	"Views@Code.links":
+	[
+		"SalesCube.views/Default.json",
+		"SalesCube.views/filter.json",
+		"SalesCube.views/Price.json",
+		"SalesCube.views/Region.json"
+	]
+}

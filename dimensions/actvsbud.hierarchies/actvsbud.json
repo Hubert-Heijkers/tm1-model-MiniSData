@@ -1,0 +1,33 @@
+{
+	"@type":"Hierarchy",
+	"Name":"actvsbud",
+	"Elements":
+	[
+		{
+			"Name":"Actual",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Budget",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Variance",
+			"Type":"Consolidated"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Variance",
+			"ComponentName":"Actual",
+			"Weight":1
+		},
+		{
+			"ParentName":"Variance",
+			"ComponentName":"Budget",
+			"Weight":-1
+		}
+	],
+	"Subsets@Code.links":[]
+}

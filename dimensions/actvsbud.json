@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"actvsbud",
+	"Hierarchies@Code.links":
+	[
+		"actvsbud.hierarchies/actvsbud.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('actvsbud')/Hierarchies('actvsbud')"
+	}
+}
