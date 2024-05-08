@@ -19,6 +19,13 @@
 	"Variables":
 	[
 		{
+			"Name":"V1",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
 			"Name":"V2",
 			"Type":"String",
 			"Position":2,
