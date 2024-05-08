@@ -1,0 +1,58 @@
+{
+    "Version": "1.0",
+    "Name": "MiniSData",
+    "Files":
+    [
+        "README.md",
+        ".github/*",
+        "scripts/*",
+        "/}sys_attributes/*"
+    ],
+    "Ignore": 
+    [
+        "!Processes('}sys_attributes_export_data')",
+        "!Processes('}sys_attributes_export_defs')",
+        "!Processes('}sys_attributes_import_data')",
+        "!Processes('}sys_attributes_import_defs')",
+        "!Processes('}sys_attributes_sync')"
+    ],
+    "Deployment":
+    {
+        "Development":
+        {
+            "Tasks":
+            {
+                "ImportAttributes":
+                {
+                    "Process": "Processes('}sys_attributes_sync')",
+                    "Parameters":
+                    [
+                        {
+                            "Name": "op",
+                            "Value": "1"
+                        }
+                    ]
+                },
+                "ExportAttributes":
+                {
+                    "Process": "Processes('}sys_attributes_sync')",
+                    "Parameters":
+                    [
+                        {
+                            "Name": "op",
+                            "Value": "0"
+                        }
+                    ]
+                }
+            },
+            "PostPull":
+            [ 
+                "Tasks('ImportAttributes')"
+            ],
+            "PrePush":
+            [ 
+                "Tasks('ExportAttributes')"
+            ]
+        }
+    }
+}
