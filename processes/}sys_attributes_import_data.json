@@ -6,14 +6,14 @@
 	"DataSource":
 	{
 		"Type":"ASCII",
-		"asciiDecimalSeparator":".",
-		"asciiDelimiterChar":",",
-		"asciiDelimiterType":"Character",
+		"dataSourceNameForServer":"dummy_cube_data.dat",
+		"dataSourceNameForClient":"dummy_cube_data.dat",
 		"asciiHeaderRecords":0,
 		"asciiQuoteCharacter":"\"",
+		"asciiDecimalSeparator":".",
 		"asciiThousandSeparator":",",
-		"dataSourceNameForClient":"dummy_cube_data.dat",
-		"dataSourceNameForServer":"dummy_cube_data.dat"
+		"asciiDelimiterType":"Character",
+		"asciiDelimiterChar":","
 	},
 	"Parameters":
 	[
