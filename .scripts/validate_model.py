@@ -34,6 +34,14 @@ def cleanup():
         sys.exit(1)
     log_output(f"Database {tm1_database_name} deleted!")
 
+def dump_file_content(file_endpoint):
+    # Pull the content from the endpoint
+    status_code, response = send_get_request(session, tm1_service_root_url, f"{database_endpoint}/{file_endpoint}/Content")
+    if status_code == 200:
+        log_output(response.text)
+    else:
+        log_output(f"Failed to retrieve content from {file_endpoint}!", status_code, response)
+
 # Create the database on our target TM1 service instance
 database_create_payload = {
     "Name": f"{tm1_database_name}"
@@ -76,6 +84,27 @@ if status_code != 204:
     sys.exit(1)
 log_output("GIT Pull plan executed successfully!")
 
+# Execute the create_Y2Ksales_cube process to validate that it works
+process_name = "create_Y2Ksales_cube"
+status_code, response = send_post_request(session, tm1_service_root_url, f"{database_endpoint}/Processes('{process_name}')/tm1.ExecuteWithReturn?$expand=*", {})
+if status_code != 201:
+    log_output(f"The request to execute the {process_name} process failed!", status_code, response)
+    cleanup()
+    sys.exit(1)
+process_execute_status_code = response['ProcessExecuteStatusCode']
+process_execute_log_file_name = response['ErrorLogFile']['Filename']
+match process_execute_status_code:
+    case "Aborted":
+        log_output(f"Process {process_name} aborted.")
+        dump_file_content(f"Contents('Files')/Contents('.tmp')/Contents('{process_execute_log_file_name}')")
+        cleanup()
+        sys.exit(1)
+    case "CompletedSuccessfully":
+        log_output(f"Process {process_name} completed successfully.")
+    case _:
+        log_output(f"Process {process_name} returned status code: {process_execute_status_code}.")
+        dump_file_content(f"Contents('Files')/Contents('.tmp')/Contents('{process_execute_log_file_name}')")
+
 # Last but not least, now that we're done testing, lets cleanup by removing the database
-log_output("Model deployed successfully!")
+log_output("Model deployed and validated successfully!")
 cleanup()
