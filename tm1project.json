@@ -3,8 +3,7 @@
     "Name": "MiniSData",
     "Files":
     [
-        ".sys_attributes/*",
-        "y2ksales.cma"
+        ".sys_attributes/*"
     ],
     "Ignore": 
     [
