@@ -3,7 +3,7 @@
 #****Begin: Generated Statements***
 #****End: Generated Statements****
 
-data_dir = './}sys_attributes/';
+data_dir = './.sys_attributes/';
 
 ### Element Attributes ###
 IF(op = 1);
