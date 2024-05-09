@@ -2,15 +2,19 @@ import sys
 from common import *
 
 tm1_database_name = "MiniSData"
+branch_name = "main"
 if len(sys.argv) > 1:
-    pr_number = sys.argv[1]
+    branch_name = sys.argv[1]
+if len(sys.argv) > 2:
+    pr_number = sys.argv[2]
     print(f"Pull Request: #{pr_number}")
     tm1_database_name = f"{tm1_database_name}-{pr_number}"
-if len(sys.argv) > 2:
-    commit_hash = sys.argv[2]
+if len(sys.argv) > 3:
+    commit_hash = sys.argv[3]
     print(f"Commit Hash: {commit_hash}")
     tm1_database_name = f"{tm1_database_name}-{commit_hash[:7]}"
 print(f"Datbase name: {tm1_database_name}")
+print(f"Sourcing from branch: {branch_name}")
 
 tm1_service_root_url = "http://cwc-tm1-v12-demo.tm1-code.io:4444/tm1/api/v1"
 tm1_service_username = "hubert@tm1-code.io"
@@ -54,7 +58,7 @@ log_output("GIT initialized successfully!", response_json=response)
 
 # Pull the latest version of the sources from the main branch
 git_pull_payload = {
-    "Branch": "main"
+    "Branch": f"{branch_name}"
 }
 status_code, response = send_post_request(session, tm1_service_root_url, f"{database_endpoint}/GitPull", git_pull_payload)
 if status_code != 201:

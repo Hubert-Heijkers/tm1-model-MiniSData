@@ -24,4 +24,4 @@ jobs:
         pip install requests
 
     - name: Run Model validation script
-      run: python ./.scripts/validate_model.py ${{ github.event.number }} ${{ github.sha }}
+      run: python ./.scripts/validate_model.py ${{ github.head_ref }} ${{ github.event.number }} ${{ github.sha }}
