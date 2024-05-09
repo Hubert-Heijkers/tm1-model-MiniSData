@@ -1,0 +1,33 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+if ( CubeExists('Y2Ksales') <> 0 );
+    CubeDestroy('Y2Ksales');
+    endif;
+DIMENSIONSORTORDER('region','','','BYINPUT','ASCENDING');
+CUBECREATE('Y2Ksales','actvsbud','region','model','account1','month');
+OldCubeLogChanges = CUBEGETLOGCHANGES('Y2Ksales');
+CUBESETLOGCHANGES('Y2Ksales', 0);
+#****End: Generated Statements****
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+DIMENSIONELEMENTINSERT('region','',V3,'n');
+#****End: Generated Statements****
+
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+CellPutN(V7,'Y2Ksales',V2,V3,V4,V5,V6);
+#****End: Generated Statements****
+
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+CUBESETLOGCHANGES('Y2Ksales', OldCubeLogChanges);
+#****End: Generated Statements****
+#endregion
