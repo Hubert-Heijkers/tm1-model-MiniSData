@@ -2,16 +2,6 @@ import sys
 from common import *
 
 tm1_database_name = "MiniSData"
-if len(sys.argv) > 1:
-    pr_number = sys.argv[1]
-    print(f"Pull Request: #{pr_number}")
-    tm1_database_name = f"{tm1_database_name}-{pr_number}"
-if len(sys.argv) > 2:
-    commit_hash = sys.argv[2]
-    print(f"Commit Hash: {commit_hash}")
-    tm1_database_name = f"{tm1_database_name}-{commit_hash[:7]}"
-print(f"Datbase name: {tm1_database_name}")
-
 tm1_service_root_url = "http://cwc-tm1-v12-demo.tm1-code.io:4444/tm1/api/v1"
 tm1_service_username = "hubert@tm1-code.io"
 tm1_service_password = "apple"
@@ -70,8 +60,4 @@ if status_code != 204:
     log_output(f"Execution of Pull plan failed!", status_code, response)
     cleanup()
     sys.exit(1)
-log_output("GIT Pull plan executed successfully!")
-
-# Last but not least, now that we're done testing, lets cleanup by removing the database
 log_output("Model deployed successfully!")
-cleanup()
