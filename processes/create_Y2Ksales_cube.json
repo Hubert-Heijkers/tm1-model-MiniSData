@@ -6,8 +6,8 @@
 	"DataSource":
 	{
 		"Type":"ASCII",
-		"dataSourceNameForServer":"y2ksales.cma",
-		"dataSourceNameForClient":"../Contents('Files')/Contents('y2ksales.cma')",
+		"dataSourceNameForServer":"http://cwc-tm1-v12-demo.tm1-code.io/files/y2ksales.cma",
+		"dataSourceNameForClient":"http://cwc-tm1-v12-demo.tm1-code.io/files/y2ksales.cma",
 		"asciiHeaderRecords":0,
 		"asciiQuoteCharacter":"\"",
 		"asciiDecimalSeparator":".",
