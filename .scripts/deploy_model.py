@@ -2,8 +2,8 @@ import sys
 from common import *
 
 tm1_database_name = "MiniSData"
-tm1_service_root_url = "http://cwc-tm1-v12-demo.tm1-code.io:4444/tm1/api/v1"
-tm1_service_username = "hubert@tm1-code.io"
+tm1_service_root_url = "http://7-anwendertag-demo.tm1-code.io:4444/7-anwendertag/api/v1"
+tm1_service_username = "github-actions@example.com"
 tm1_service_password = "apple"
 
 # Setup session and authentication
