@@ -28,6 +28,12 @@ def setup_session(username, password):
     })
     return session
 
+def send_get_request(session, service_root_url, endpoint):
+    full_url = f"{service_root_url}/{endpoint}"
+    print(f"<<< GET {full_url}")
+    response = session.get(full_url)
+    return response.status_code, response
+
 def send_post_request(session, service_root_url, endpoint, payload):
     full_url = f"{service_root_url}/{endpoint}"
     headers = {
