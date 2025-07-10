@@ -64,6 +64,10 @@
 			"Type":"Numeric"
 		},
 		{
+			"Name":"Nederland",
+			"Type":"Numeric"
+		},
+		{
 			"Name":"Norway",
 			"Type":"Numeric"
 		},
@@ -197,6 +201,11 @@
 		{
 			"ParentName":"Benelux",
 			"ComponentName":"Netherlands",
+			"Weight":1
+		},
+		{
+			"ParentName":"Benelux",
+			"ComponentName":"Nederland",
 			"Weight":1
 		},
 		{
